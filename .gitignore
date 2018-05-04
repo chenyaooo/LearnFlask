@@ -99,3 +99,6 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# 上传的flask项目中的.idea文件夹
+.idea/
