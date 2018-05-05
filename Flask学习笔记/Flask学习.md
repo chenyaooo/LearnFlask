@@ -148,10 +148,10 @@ day01
   		"""自定义的支持传入正则表达式的转换器"""
   		
   		def __init__(self, url_map, *args):
-  		# 调用父类方法,注意flask使用的是python2,调用父类方法时需要传入名字
+  		调用父类方法,注意flask使用的是python2,调用父类方法时需要传入名字
   		
   		super(Reconverter, self).__init__(url_map)
-  		# 将传入的参数args,保存到regex属性中
+  		将传入的参数args,保存到regex属性中
   		
   		self.regex = args[0]  # args[0]就是我们在路由装饰器参数中传入的正则表达式
  
@@ -159,11 +159,10 @@ day01
  app.url_map.converter["re"]=ReConverter
  
  3. 在路由装饰器中使用正则
-   #  捕获url中的3个整数
+    捕获url中的3个整数
    app.route(“/id/<re('\d{3}'):id>”)
   def hello(id):
   		return id
-  
   
   ```
   
