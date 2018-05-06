@@ -28,5 +28,12 @@ def get_session():
     return name
 
 
+# 删除session
+@app.route("/del_session")
+def del_session():
+    session.pop("name")
+    return "delete session success"
+
+
 if __name__ == '__main__':
     app.run()
